@@ -1,0 +1,29 @@
+/*Profesor: Jose Fuentes
+* Curso:4*1
+* Alumno: Matias Benito
+* Fecha: 01-5-2023
+*/
+package main
+
+import "fmt"
+
+func main() {
+var temperatura float64
+var escala string
+
+fmt.Print("Ingrese la temperatura: ")
+fmt.Scanln(&temperatura)
+
+fmt.Print("Ingrese la escala (C)elsius o (F)Fahrenheit: ")
+fmt.Scanln(&escala)
+
+if escala == "C" {
+temperaturaF := (temperatura * 9 / 5) + 32
+fmt.Printf("%.2f°C equivalen a %.2f°F\n", temperatura, temperaturaF)
+} else if escala == "F" {
+temperaturaC := (temperatura - 32) * 5 / 9
+fmt.Printf("%.2f°F equivalen a %.2f°C\n", temperatura, temperaturaC)
+} else {
+fmt.Println("Ingreso una escala incorrecta. Tiene que ingresar 'C' para Celsius o 'F' para Fahrenheit.")
+}
+}
