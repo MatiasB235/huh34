@@ -1,0 +1,23 @@
+int pinRojo = 13;
+int pinAmbar = 12;
+int pinVerde = 11;
+  
+void setup()
+{
+  pinMode(pinRojo,OUTPUT);
+  pinMode(pinAmbar,OUTPUT);
+  pinMode(pinVerde,OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(pinRojo,HIGH);
+  delay(1000);
+  digitalWrite(pinRojo,LOW);
+  digitalWrite(pinVerde,HIGH);
+  delay(1000); 
+  digitalWrite(pinVerde,LOW);
+  digitalWrite(pinAmbar,HIGH);
+  delay(1000);
+  digitalWrite(pinAmbar,LOW);
+}
